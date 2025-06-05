@@ -1,0 +1,114 @@
+{
+  "milestones": [
+    {
+      "title": "User Authentication & Onboarding",
+      "issues": [
+        {
+          "title": "Sign up with email or OAuth",
+          "body": "As a new user, I want to sign up using email or Google so that I can create an account and save my progress.\n\n**Acceptance Criteria:**\n- Email and Google auth\n- User data saved in DB\n- Duplicate emails are blocked",
+          "labels": ["auth", "backend", "frontend"]
+        },
+        {
+          "title": "Personalized onboarding flow",
+          "body": "As a new user, I want to select preferred topics and daily goals so that I can tailor the experience.\n\n**Acceptance Criteria:**\n- Choose topics (Arrays, Trees...)\n- Set daily goal (1–5 problems)",
+          "labels": ["frontend", "UX"]
+        }
+      ]
+    },
+    {
+      "title": "Problem Recommendation & Solving",
+      "issues": [
+        {
+          "title": "View daily recommended problem",
+          "body": "As a user, I want to see a daily recommended problem based on my goals so I know what to solve next.\n\n**Acceptance Criteria:**\n- Problem data shown\n- Next problem appears after solving",
+          "labels": ["frontend", "backend"]
+        },
+        {
+          "title": "Submit my code",
+          "body": "As a user, I want to submit my code so that the system can store it and evaluate my progress.\n\n**Acceptance Criteria:**\n- Code editor with language select\n- Submission stored with result",
+          "labels": ["frontend", "backend"]
+        }
+      ]
+    },
+    {
+      "title": "AI Coaching & Feedback",
+      "issues": [
+        {
+          "title": "AI-powered code review",
+          "body": "As a user, I want to receive GPT-based feedback on my code so I can improve.\n\n**Acceptance Criteria:**\n- GPT API integration\n- Feedback saved in DB and shown on UI",
+          "labels": ["AI", "backend", "frontend"]
+        },
+        {
+          "title": "AI-generated problem hints",
+          "body": "As a user, I want to get hints if I’m stuck on a problem so I can still make progress.\n\n**Acceptance Criteria:**\n- Click 'Hint' returns AI hint\n- Hint levels: low → high",
+          "labels": ["AI", "frontend"]
+        }
+      ]
+    },
+    {
+      "title": "Progress Tracking & Analytics",
+      "issues": [
+        {
+          "title": "Track streaks and problem count",
+          "body": "As a user, I want to see my streaks and total solved so I stay motivated.\n\n**Acceptance Criteria:**\n- Track submission dates\n- Show current + longest streak",
+          "labels": ["backend", "analytics", "UX"]
+        },
+        {
+          "title": "View skill mastery heatmap",
+          "body": "As a user, I want to see topic mastery so I know where to improve.\n\n**Acceptance Criteria:**\n- Mastery score per topic\n- Display as heatmap or bar graph",
+          "labels": ["frontend", "analytics"]
+        }
+      ]
+    },
+    {
+      "title": "UI & UX Foundation",
+      "issues": [
+        {
+          "title": "Gamified dashboard UI",
+          "body": "As a user, I want a dashboard showing XP, streaks, and goals so I can stay engaged.\n\n**Acceptance Criteria:**\n- Dashboard layout with XP/streak widgets\n- Dark mode supported",
+          "labels": ["frontend", "UX"]
+        }
+      ]
+    },
+    {
+      "title": "DevOps & Deployment",
+      "issues": [
+        {
+          "title": "Deploy MVP to Vercel/Railway",
+          "body": "As a developer, I want to deploy the MVP publicly so users can access it.\n\n**Acceptance Criteria:**\n- Deployment on Vercel or Railway\n- Secure environment variables",
+          "labels": ["infra", "deployment"]
+        }
+      ]
+    },
+    {
+      "title": "Database & Schema Setup",
+      "issues": [
+        {
+          "title": "Implement Prisma schema",
+          "body": "As a backend dev, I want to create a DB schema to persist users, problems, and attempts.\n\n**Acceptance Criteria:**\n- Models: User, Problem, Attempt, Feedback, AIHint\n- Prisma migration runs successfully",
+          "labels": ["backend", "DB"]
+        }
+      ]
+    },
+    {
+      "title": "AI Integration",
+      "issues": [
+        {
+          "title": "Integrate OpenAI GPT-4 for feedback",
+          "body": "As a system, I want to use OpenAI to generate code reviews so users get smart coaching.\n\n**Acceptance Criteria:**\n- Input: code + problem context\n- Output: feedback text\n- Error handling in place",
+          "labels": ["backend", "AI"]
+        }
+      ]
+    },
+    {
+      "title": "Static Problem Source (MVP Shortcut)",
+      "issues": [
+        {
+          "title": "Load problems from static JSON",
+          "body": "As a dev, I want to use static JSON files for problems so I can skip LeetCode API for MVP.\n\n**Acceptance Criteria:**\n- JSON with problem data (title, topic, diff)\n- Used by recommender engine",
+          "labels": ["backend", "MVP"]
+        }
+      ]
+    }
+  ]
+}
